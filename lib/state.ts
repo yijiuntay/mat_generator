@@ -10,7 +10,7 @@ import type {
 } from './types';
 
 export const DEFAULT_CONFIG: MatConfig = {
-  size: { mode: 'preset', presetId: 'iphone-15-16' },
+  size: { mode: 'preset', presetId: 'iphone-17' },
   orientation: 'portrait',
   unit: 'in',
 

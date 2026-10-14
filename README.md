@@ -4,7 +4,7 @@ Turn your phone, tablet, or monitor into a **true-to-scale cutting mat**.
 
 This web app generates cutting-mat-style wallpapers with a grid ruled to real-world units. Set the wallpaper at native resolution and a 1-inch square on screen measures 1 real inch, so you can use your screen to measure fabric, paper, vinyl, and other small pieces.
 
-**Live app:** _coming soon_
+**Live app:** <https://mat-generator.vercel.app/>
 
 ## Features
 

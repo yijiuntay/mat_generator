@@ -7,14 +7,40 @@ import type { DevicePreset } from './types';
 
 export const DEVICE_PRESETS: DevicePreset[] = [
   // ── Phones ──────────────────────────────────────────────────────────────
-  { id: 'iphone-se-3',        label: 'iPhone SE (3rd gen)',       category: 'phone',   widthPx: 750,  heightPx: 1334, diagonalIn: 4.7  },
-  { id: 'iphone-13-14',       label: 'iPhone 13 / 14',            category: 'phone',   widthPx: 1170, heightPx: 2532, diagonalIn: 6.1  },
-  { id: 'iphone-15-16',       label: 'iPhone 15 / 16',            category: 'phone',   widthPx: 1179, heightPx: 2556, diagonalIn: 6.1  },
-  { id: 'iphone-15-16-plus',  label: 'iPhone 15 / 16 Plus',       category: 'phone',   widthPx: 1290, heightPx: 2796, diagonalIn: 6.7  },
-  { id: 'galaxy-s24',         label: 'Samsung Galaxy S24',        category: 'phone',   widthPx: 1080, heightPx: 2340, diagonalIn: 6.1  },
-  { id: 'galaxy-s24-ultra',   label: 'Samsung Galaxy S24 Ultra',  category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.8  },
-  { id: 'pixel-8',            label: 'Google Pixel 8',            category: 'phone',   widthPx: 1080, heightPx: 2400, diagonalIn: 6.2  },
-  { id: 'pixel-8-pro',        label: 'Google Pixel 8 Pro',        category: 'phone',   widthPx: 1344, heightPx: 2992, diagonalIn: 6.7  },
+  // Verified Oct 2026 against official spec pages. Diagonals are the full-rectangle
+  // measurement: Apple's exact "measured as a rectangle" inches; Samsung and Google
+  // from their published mm values (÷ 25.4). Foldables are omitted (two screens).
+  // Base iPhone 18 is not yet released (expected spring 2027).
+  { id: 'iphone-18-pro',      label: 'iPhone 18 Pro',             category: 'phone',   widthPx: 1206, heightPx: 2622, diagonalIn: 6.27 },
+  { id: 'iphone-18-pro-max',  label: 'iPhone 18 Pro Max',         category: 'phone',   widthPx: 1320, heightPx: 2868, diagonalIn: 6.86 },
+  { id: 'iphone-17',          label: 'iPhone 17',                 category: 'phone',   widthPx: 1206, heightPx: 2622, diagonalIn: 6.27 },
+  { id: 'iphone-17e',         label: 'iPhone 17e',                category: 'phone',   widthPx: 1170, heightPx: 2532, diagonalIn: 6.06 },
+  { id: 'iphone-air',         label: 'iPhone Air',                category: 'phone',   widthPx: 1260, heightPx: 2736, diagonalIn: 6.55 },
+  { id: 'iphone-17-pro',      label: 'iPhone 17 Pro',             category: 'phone',   widthPx: 1206, heightPx: 2622, diagonalIn: 6.27 },
+  { id: 'iphone-17-pro-max',  label: 'iPhone 17 Pro Max',         category: 'phone',   widthPx: 1320, heightPx: 2868, diagonalIn: 6.86 },
+  { id: 'iphone-16',          label: 'iPhone 16',                 category: 'phone',   widthPx: 1179, heightPx: 2556, diagonalIn: 6.12 },
+  { id: 'iphone-16e',         label: 'iPhone 16e',                category: 'phone',   widthPx: 1170, heightPx: 2532, diagonalIn: 6.06 },
+  { id: 'iphone-16-plus',     label: 'iPhone 16 Plus',            category: 'phone',   widthPx: 1290, heightPx: 2796, diagonalIn: 6.69 },
+  { id: 'iphone-16-pro',      label: 'iPhone 16 Pro',             category: 'phone',   widthPx: 1206, heightPx: 2622, diagonalIn: 6.27 },
+  { id: 'iphone-16-pro-max',  label: 'iPhone 16 Pro Max',         category: 'phone',   widthPx: 1320, heightPx: 2868, diagonalIn: 6.86 },
+  { id: 'galaxy-s26',         label: 'Samsung Galaxy S26',        category: 'phone',   widthPx: 1080, heightPx: 2340, diagonalIn: 6.27 },
+  { id: 'galaxy-s26-plus',    label: 'Samsung Galaxy S26+',       category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.66 },
+  { id: 'galaxy-s26-ultra',   label: 'Samsung Galaxy S26 Ultra',  category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.89 },
+  { id: 'galaxy-s25',         label: 'Samsung Galaxy S25',        category: 'phone',   widthPx: 1080, heightPx: 2340, diagonalIn: 6.16 },
+  { id: 'galaxy-s25-plus',    label: 'Samsung Galaxy S25+',       category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.66 },
+  { id: 'galaxy-s25-ultra',   label: 'Samsung Galaxy S25 Ultra',  category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.86 },
+  { id: 'galaxy-s24',         label: 'Samsung Galaxy S24',        category: 'phone',   widthPx: 1080, heightPx: 2340, diagonalIn: 6.16 },
+  { id: 'galaxy-s24-plus',    label: 'Samsung Galaxy S24+',       category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.66 },
+  { id: 'galaxy-s24-ultra',   label: 'Samsung Galaxy S24 Ultra',  category: 'phone',   widthPx: 1440, heightPx: 3120, diagonalIn: 6.79 },
+  { id: 'pixel-11',           label: 'Google Pixel 11',           category: 'phone',   widthPx: 1080, heightPx: 2424, diagonalIn: 6.30 },
+  { id: 'pixel-11-pro',       label: 'Google Pixel 11 Pro',       category: 'phone',   widthPx: 1280, heightPx: 2856, diagonalIn: 6.34 },
+  { id: 'pixel-11-pro-xl',    label: 'Google Pixel 11 Pro XL',    category: 'phone',   widthPx: 1344, heightPx: 2992, diagonalIn: 6.73 },
+  { id: 'pixel-10',           label: 'Google Pixel 10',           category: 'phone',   widthPx: 1080, heightPx: 2424, diagonalIn: 6.30 },
+  { id: 'pixel-10-pro',       label: 'Google Pixel 10 Pro',       category: 'phone',   widthPx: 1280, heightPx: 2856, diagonalIn: 6.34 },
+  { id: 'pixel-10-pro-xl',    label: 'Google Pixel 10 Pro XL',    category: 'phone',   widthPx: 1344, heightPx: 2992, diagonalIn: 6.73 },
+  { id: 'pixel-9',            label: 'Google Pixel 9',            category: 'phone',   widthPx: 1080, heightPx: 2424, diagonalIn: 6.30 },
+  { id: 'pixel-9-pro',        label: 'Google Pixel 9 Pro',        category: 'phone',   widthPx: 1280, heightPx: 2856, diagonalIn: 6.34 },
+  { id: 'pixel-9-pro-xl',     label: 'Google Pixel 9 Pro XL',     category: 'phone',   widthPx: 1344, heightPx: 2992, diagonalIn: 6.80 },
 
   // ── Tablets ─────────────────────────────────────────────────────────────
   { id: 'ipad-10',            label: 'iPad (10th gen)',           category: 'tablet',  widthPx: 1640, heightPx: 2360, diagonalIn: 10.9 },
